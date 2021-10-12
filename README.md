@@ -83,6 +83,7 @@ cargarDatos = () => {
 componentDidMount = () => {
     this.cargarDatos();
 }
+
 ***2º componentDidUpdate()***
 
 Este ciclo se invoca tan pronto como la actualizacion ocurre.
@@ -96,6 +97,7 @@ componentDidUpdate(previasProps, previoState) {
           // Llamar a una funcion o hacer peticiones ajax
         }
 }
+
 ***3º componentWillUnmount()***
 
 Como el nombre suguiere, este metodo se llamara justo antes de que sea destruido.
