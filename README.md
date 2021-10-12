@@ -1,6 +1,6 @@
 # React
 
-## . ***Estados y Ciclo de vida ***
+## ***Estados y Ciclo de vida ***
 
 ***Estado***
 
@@ -31,7 +31,7 @@ class Hijo1 extends React.Component{
 
  
 
-MODIFICAR EL STATE EN UN COMPONENTE DE CLASE
+***MODIFICAR EL STATE EN UN COMPONENTE DE CLASE***
 La manera correcta de actualizar y manipular el estado en este tipo de componentes es a través de setState, por ejemplo:
 
 class Hijo1 extends React.Component{
@@ -45,7 +45,7 @@ class Hijo1 extends React.Component{
     ...
 }
 
-¿Qué son los métodos de ciclos de vida?
+***¿Qué son los métodos de ciclos de vida?***
 
 Son la serie de eventos que sucede desde que se crea el componente hasta su destrucción
 Para que te sea mas fácil de comprender el ciclo de vida de un componente.
@@ -120,12 +120,12 @@ React Router es una colección de componentes de navegación la cual podemos usa
 tanto en web o en móvil con React Native. Con esta librearía vamos a obtener un enrutamiento
 dinámico gracias a los componentes, en otras palabras tenemos unas rutas que renderizan un componente.
 
-Switch
+***Switch***
 
 Este componente es el encargado de que solo se renderice el primer hijo Route o Redirect que coincide con la ubicación.
 Si no usar este componente todos los componentes Route o Redirect se van a renderizar mientras cumplan con la condición establecida.
 
-Route
+***Route***
 
 Con Route podemos definir las rutas de nuestra aplicación, quizás sea el componente más importante de React Router
 para llegar a comprender todo el manejo de esta librería. Cuando definimos una ruta con Route le indicamos
@@ -133,18 +133,18 @@ que componente debe renderizar.
 
 Este componente cuanta con algunas propiedades.
 
-Path: la ruta donde debemos renderizar nuestro componente podemos pasar un string o un array de string.
+***Path***: la ruta donde debemos renderizar nuestro componente podemos pasar un string o un array de string.
 
-Exact: Solo vamos a mostrar nuestro componente cuando la ruta sea exacta. Ej: /home === /home.
+***Exact***: Solo vamos a mostrar nuestro componente cuando la ruta sea exacta. Ej: /home === /home.
 
-Strict: Solo vamos a mostrar nuestro componente si al final de la ruta tiene un slash. Ej: /home/ === /home/
+***Strict***: Solo vamos a mostrar nuestro componente si al final de la ruta tiene un slash. Ej: /home/ === /home/
 
-Sensitive: Si le pasamos true vamos a tener en cuenta las mayúsculas y las minúsculas de nuestras rutas. Ej: /Home === /Home
+***Sensitive***: Si le pasamos true vamos a tener en cuenta las mayúsculas y las minúsculas de nuestras rutas. Ej: /Home === /Home
 
-Component: Le pasamos un componente para renderizar solo cuando la ubicación coincide.
+***Component***: Le pasamos un componente para renderizar solo cuando la ubicación coincide.
  En este caso el componente se monta y se desmonta no se actualiza.
 
-Render: Le pasamos una función para montar el componente en línea.
+***Render***: Le pasamos una función para montar el componente en línea.
 
 
 https://johnserrano.co/blog/aprende-a-crear-rutas-con-react-router
