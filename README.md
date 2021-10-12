@@ -52,11 +52,11 @@ Para que te sea mas fácil de comprender el ciclo de vida de un componente.
 
 Los palabras claves de los métodos son las siguientes
 
-1º Mounting: creación del componente
+***1º Mounting***: creación del componente
 
-2º Update: Cambios en el componente
+***2º Update***: Cambios en el componente
 
-3º Unmount: Destrucción del componente
+***3º Unmount***: Destrucción del componente
 
 Ciclos más usados
 
@@ -64,7 +64,7 @@ Render()
 
 El método render() es el método más usado es el unico metodo obligatorio en la clase de un componente de React
 
-1º componentDidMount()
+***1º componentDidMount()***
 
 En el momento que tu componente ya se creo, es cuando este metodo empieza a ejecutarse.
 
@@ -83,7 +83,7 @@ cargarDatos = () => {
 componentDidMount = () => {
     this.cargarDatos();
 }
-2º componentDidUpdate()
+***2º componentDidUpdate()***
 
 Este ciclo se invoca tan pronto como la actualizacion ocurre.
 
@@ -96,7 +96,7 @@ componentDidUpdate(previasProps, previoState) {
           // Llamar a una funcion o hacer peticiones ajax
         }
 }
-3º componentWillUnmount()
+***3º componentWillUnmount()***
 
 Como el nombre suguiere, este metodo se llamara justo antes de que sea destruido.
 Se suele utilizar para limpieza (cerrar peticiones ajax, timeouts, eliminar Eventos… )
