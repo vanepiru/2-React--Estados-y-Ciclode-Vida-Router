@@ -154,9 +154,6 @@ Este componente cuanta con algunas propiedades.
 ***Render***: Le pasamos una función para montar el componente en línea.
 
 
-https://johnserrano.co/blog/aprende-a-crear-rutas-con-react-router
-
-
 **Ejemplo:**
 
 ```js
