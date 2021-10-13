@@ -202,3 +202,72 @@ es igual a
 <Modal name={person.name} age={person.age} title='Modal heading' animation={false} />
 ```
 
+***Constructor Más definiciones***
+
+El estado de nuestro componente en el constructor se define así:
+
+constructor (props) {
+    super(props);
+    this.state = {
+        propiedad: 'Algún valor'
+    }
+}
+Si no defines ningún estado en el constructor, entonces no lo necesitas.
+
+Si se te ocurre definir el state usando las props pasados como parámetros probablemente es mejor definir el state en un componente padre o en la raíz de todos los componentes porque el estado no estará sincronizado con los cambios de las propiedades.
+
+constructor (props) {
+    super(props);
+    this.state = {
+        propieda: props.nombrePropiedad
+    }
+}
+Para enlazar la referencia de la instancia de nuestro componente a los métodos que son utilizados en el método render() y que normalmente son los manejadores de eventos:
+
+class Padre extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = { src: '' }
+        this.cambiarAnimal = this.cambiarAnimal.bind(this);
+    }
+    
+    cambiarAnimal () {
+        this.setState({
+            src: 'Algúna url que apunte a una imagen de un animal' 
+        });
+    }
+    
+    render() {
+        return (
+          <div>
+            <Animal src={this.state.src}/>
+            <button onClick={this.cambiarAnimal}>Cambiar animal</button>
+          </div>
+        );
+    }
+}
+Ahora el método this.cambiarAnimal podrá acceder a la instancia de nuestro componente a través de this y así utilizar this.setState() para cambiar el estado.
+
+Existe otra opción para utilizar métodos de nuestra clase como manejadores de eventos, con el uso de funciones flecha (arrow functions).
+
+class Padre extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = { src: '' }
+    }
+    
+    cambiarAnimal = () => {
+        this.setState({
+            src: 'Algúna url que apunte a una imagen de un animal' 
+        });
+    }
+    
+    render() {
+        return (
+          <div>
+            <Animal src={this.state.src}/>
+            <button onClick={this.cambiarAnimal}>Cambiar animal</button>
+          </div>
+        );
+    }
+}
