@@ -110,7 +110,8 @@ componentWillUnmount() {
 }
 
 
-https://techclub.tajamar.es/ciclo-de-vida-de-los-componentes-en-react/
+![image](https://user-images.githubusercontent.com/6796155/137124077-0bc9e1b8-f9f9-4fd4-b6b5-44ccf92221e5.png)
+
 
 ## . ***Puerto por Defecto***
 
