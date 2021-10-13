@@ -174,7 +174,7 @@ const App = () => (
 );
 ```
 
-***Propagación de propiedad ***
+***Propagación de propiedad***
 
 
 Esta es una característica de ES6, que también se usa en React. Mira el siguiente ejemplo:
@@ -205,25 +205,28 @@ es igual a
 ***Constructor Más definiciones***
 
 El estado de nuestro componente en el constructor se define así:
-
+```js
 constructor (props) {
     super(props);
     this.state = {
         propiedad: 'Algún valor'
     }
 }
+```
 Si no defines ningún estado en el constructor, entonces no lo necesitas.
 
 Si se te ocurre definir el state usando las props pasados como parámetros probablemente es mejor definir el state en un componente padre o en la raíz de todos los componentes porque el estado no estará sincronizado con los cambios de las propiedades.
 
+```js
 constructor (props) {
     super(props);
     this.state = {
         propieda: props.nombrePropiedad
     }
 }
+```
 Para enlazar la referencia de la instancia de nuestro componente a los métodos que son utilizados en el método render() y que normalmente son los manejadores de eventos:
-
+```js
 class Padre extends React.Component {
     constructor (props) {
         super(props);
@@ -246,10 +249,11 @@ class Padre extends React.Component {
         );
     }
 }
+```
 Ahora el método this.cambiarAnimal podrá acceder a la instancia de nuestro componente a través de this y así utilizar this.setState() para cambiar el estado.
 
 Existe otra opción para utilizar métodos de nuestra clase como manejadores de eventos, con el uso de funciones flecha (arrow functions).
-
+```js
 class Padre extends React.Component {
     constructor (props) {
         super(props);
@@ -271,3 +275,5 @@ class Padre extends React.Component {
         );
     }
 }
+
+```
