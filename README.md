@@ -45,31 +45,37 @@ class Hijo1 extends React.Component{
 
 ***¿Qué son los métodos de ciclos de vida?***
 
-Son la serie de eventos que sucede desde que se crea el componente hasta su destrucción
-Para que te sea mas fácil de comprender el ciclo de vida de un componente.
+Son métodos que se ejecutan automáticamente en un Componente de Clase, ocurren en 3 fases:
 
-Los palabras claves de los métodos son las siguientes
+1. creación del componente .
+2. Actualización.
+3. Destrucción del componente
 
-***1º Mounting***: creación del componente
+1.Estos métodos se ejecutan cuando se crea un componente y se inserta en el arbol del DOM.
 
-***2º Update***: Cambios en el componente
+constructor(): Se ejecuta al crear la instancia del componente, en el constructor puedes inicializar el estado y enlazar manejadores de eventos.
+render(): Es el único método requerido, cuando se ejecuta, examina el estado y las propiedades y dibuja el componente en el árbol del DOM.
+componentDidMount(): Se invoca inmediatamente después de que un componente se ha insertado al árbol del DOM. Es útil para ejecutar suscripciones o peticiones asíncronas a API's, bases de datos, servicios, etc.
+Actualización
 
-***3º Unmount***: Destrucción del componente
+2.Estos métodos son ejecutados por cambios en el estado o las propiedades de los componentes.
 
-Ciclos más usados
+render(): redibuja el componente cuando detecta cambios en el estado o las propiedades del componente.
+componentDidUpdate(): Se ejecuta inmediatamente después de que la actualización del estado o las propiedades sucede, al igual que componenDidUpdate es un método ideal para hacer peticiones externas.
 
-Render()
+3.Estos métodos son ejecutados una vez que el componente ha sido eliminado del árbol del DOM.
 
-El método render() es el método más usado es el unico metodo obligatorio en la clase de un componente de React
+componentWillUnmount(): Se ejecuta antes de destruir el componente del árbol del DOM, es un método útil para hacer tareas de limpieza.
 
-***1º componentDidMount()***
+
+***componentDidMount()***
 
 En el momento que tu componente ya se creo, es cuando este metodo empieza a ejecutarse.
 
 En este método se suele poner las llamadas a la api en el caso de que lo necesitaras.
 
 Ejemplo:
-
+```js
 cargarDatos = () => {
     var url = "http://yoururlapirequest.com"
     axios.get(url).then(res => {
@@ -81,39 +87,39 @@ cargarDatos = () => {
 componentDidMount = () => {
     this.cargarDatos();
 }
-
-***2º componentDidUpdate()***
+```
+***componentDidUpdate()***
 
 Este ciclo se invoca tan pronto como la actualizacion ocurre.
 
 Se suele usar para actualizar el DOM con los datos de tu state.
 
 Ejemplo de uso:
-
+```js
 componentDidUpdate(previasProps, previoState) {
         if (this.props.input == previasProps.input) {
           // Llamar a una funcion o hacer peticiones ajax
         }
 }
-
-***3º componentWillUnmount()***
+```
+***componentWillUnmount()***
 
 Como el nombre suguiere, este metodo se llamara justo antes de que sea destruido.
 Se suele utilizar para limpieza (cerrar peticiones ajax, timeouts, eliminar Eventos… )
 
 Ejemplo de uso:
-
+```js
 componentWillUnmount() {
       document.removeEventListener("click", funcionAsignada);      
 }
-
+```
 
 ![image](https://user-images.githubusercontent.com/6796155/137124077-0bc9e1b8-f9f9-4fd4-b6b5-44ccf92221e5.png)
 
 
 ## . ***Puerto por Defecto***
 
-3000
+Cuando creamos un proyecto de React. JS con la plantilla, por defecto se ejecutará en el puerto 3000
 
 ## . ***Router***
 
