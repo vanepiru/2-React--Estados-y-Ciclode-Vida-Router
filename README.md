@@ -1,6 +1,6 @@
 # React
 
-## ***Estados y Ciclo de vida ***
+## Estados y Ciclo de vida 
 
 ***State***
 
@@ -117,11 +117,11 @@ componentWillUnmount() {
 ![image](https://user-images.githubusercontent.com/6796155/137124077-0bc9e1b8-f9f9-4fd4-b6b5-44ccf92221e5.png)
 
 
-## . ***Puerto por Defecto***
+## ***Puerto por Defecto***
 
 Cuando creamos un proyecto de React. JS con la plantilla, por defecto se ejecutará en el puerto 3000
 
-## . ***Router***
+## ***Router***
 
 React Router es una colección de componentes de navegación la cual podemos usar
 tanto en web o en móvil con React Native. Con esta librearía vamos a obtener un enrutamiento
@@ -178,7 +178,7 @@ const App = () => (
 );
 ```
 
-## . ***Propagación de propiedad ***
+## ***Propagación de propiedad ***
 
 
 Esta es una característica de ES6, que también se usa en React. Mira el siguiente ejemplo:
@@ -207,7 +207,7 @@ es igual a
 ```
 
 
-## . ***Estado con Hook***
+## ***Estado con Hook***
 
 Los Hooks son una nueva incorporación en React 16.8. Permiten usar estado y otras características de React sin escribir una clase.
 Por ejempo Con Hook
