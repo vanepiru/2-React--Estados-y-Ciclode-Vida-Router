@@ -174,7 +174,7 @@ const App = () => (
 );
 ```
 
-## ***Propagación de propiedad ***
+***Propagación de propiedad ***
 
 
 Esta es una característica de ES6, que también se usa en React. Mira el siguiente ejemplo:
