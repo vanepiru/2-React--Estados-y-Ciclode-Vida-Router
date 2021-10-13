@@ -2,20 +2,19 @@
 
 ## ***Estados y Ciclo de vida ***
 
-***Estado***
+***State***
 
 El estado puede ser un objeto (Por lo regular es un JSON) o variable.
 Podemos utilizarlo para realizar cambios desde dentro de los componentes.
-Si el estado cambia, los componentes reaccionan a este cambio modificando algo en si mismos, que prácticamente siempre será un cambio en la DOM.
-El estado también puede ser modificado desde fuera del componente y dicho componente reaccionará de la misma manera al cambio.
+
+El state son los valores internos que manejan la lógica y los datos de un componente, permite que éste reaccione a cualquier cambio lo que hará que se vuelva a renderizar en la interfaz.
 
 USO DEL STATE EN COMPONENTES DE CLASES (CLASS COMPONENT)
-Para acceder y manipular el estado dentro de un componente de clase debemos hacer uso de this,
-ejemplo de como podemos inicializar nuestro state.
+Para acceder y manipular el estado dentro de un componente de clase debemos hacer uso de this, ejemplo de como podemos inicializar nuestro state.
  
 
 INICIALIZANDO EL STATE EN UN COMPONENTE DE CLASE
-Tomando el ejemplo que realizamos en el vídeo, podemos declarar el estado de la siguiente forma dentro del constructor de la clase
+Podemos declarar el estado de la siguiente forma dentro del constructor de la clase
 
 class Hijo1 extends React.Component{
   constructor(props){
@@ -29,7 +28,6 @@ class Hijo1 extends React.Component{
   }
 }
 
- 
 
 ***MODIFICAR EL STATE EN UN COMPONENTE DE CLASE***
 La manera correcta de actualizar y manipular el estado en este tipo de componentes es a través de setState, por ejemplo:
