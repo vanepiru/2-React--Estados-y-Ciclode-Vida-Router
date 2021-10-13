@@ -15,7 +15,7 @@ Para acceder y manipular el estado dentro de un componente de clase debemos hace
 
 INICIALIZANDO EL STATE EN UN COMPONENTE DE CLASE
 Podemos declarar el estado de la siguiente forma dentro del constructor de la clase
-
+```js
 class Hijo1 extends React.Component{
   constructor(props){
     super(props);
@@ -27,11 +27,11 @@ class Hijo1 extends React.Component{
     ...
   }
 }
-
+```
 
 ***MODIFICAR EL STATE EN UN COMPONENTE DE CLASE***
 La manera correcta de actualizar y manipular el estado en este tipo de componentes es a través de setState, por ejemplo:
-
+```js
 class Hijo1 extends React.Component{
     ...
   aumentar=()=>{
@@ -42,7 +42,7 @@ class Hijo1 extends React.Component{
   }
     ...
 }
-
+```
 ***¿Qué son los métodos de ciclos de vida?***
 
 Son métodos que se ejecutan automáticamente en un Componente de Clase, ocurren en 3 fases:
