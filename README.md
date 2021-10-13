@@ -36,7 +36,6 @@ class Hijo1 extends React.Component{
     ...
   aumentar=()=>{
     this.setState({
-      ...this.state,
       cuenta:this.state.cuenta + 1
     });
   }
