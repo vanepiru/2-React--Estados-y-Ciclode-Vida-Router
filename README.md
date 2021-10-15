@@ -15,6 +15,7 @@ Para acceder y manipular el estado dentro de un componente de clase debemos hace
  
 
 ***Inicializando el state de un componente de clase**
+
 Podemos declarar el estado de la siguiente forma dentro del constructor de la clase
 
 ```js
