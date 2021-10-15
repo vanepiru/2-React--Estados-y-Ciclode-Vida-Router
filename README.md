@@ -2,19 +2,21 @@
 
 ## Estados y Ciclo de vida 
 
-***State***
+***STATE***
 
 El estado puede ser un objeto (Por lo regular es un JSON) o variable.
 Podemos utilizarlo para realizar cambios desde dentro de los componentes.
 
 El state son los valores internos que manejan la lógica y los datos de un componente, permite que éste reaccione a cualquier cambio lo que hará que se vuelva a renderizar en la interfaz.
 
-USO DEL STATE EN COMPONENTES DE CLASES (CLASS COMPONENT)
-Para acceder y manipular el estado dentro de un componente de clase debemos hacer uso de this, ejemplo de como podemos inicializar nuestro state.
+***USO DEL STATE EN COMPONENTES DE CLASES (CLASS COMPONENT)***
+
+Para acceder y manipular el estado dentro de un componente de clase debemos hacer uso de this.
  
 
-INICIALIZANDO EL STATE EN UN COMPONENTE DE CLASE
+***INICIALIZANDO EL STATE EN UN COMPONENTE DE CLASE**
 Podemos declarar el estado de la siguiente forma dentro del constructor de la clase
+
 ```js
 class Hijo1 extends React.Component{
   constructor(props){
@@ -30,7 +32,9 @@ class Hijo1 extends React.Component{
 ```
 
 ***MODIFICAR EL STATE EN UN COMPONENTE DE CLASE***
+
 La manera correcta de actualizar y manipular el estado en este tipo de componentes es a través de setState, por ejemplo:
+
 ```js
 class Hijo1 extends React.Component{
     ...
@@ -42,20 +46,20 @@ class Hijo1 extends React.Component{
     ...
 }
 ```
+
 ***¿Qué son los métodos de ciclos de vida?***
 
 Son métodos que se ejecutan automáticamente en un Componente de Clase, ocurren en 3 fases:
 
-1. creación del componente .
+1. Creación del componente .
 2. Actualización.
 3. Destrucción del componente
 
-1.Estos métodos se ejecutan cuando se crea un componente y se inserta en el arbol del DOM.
+1.Estos métodos se ejecutan cuando se crea un componente y se inserta en el árbol del DOM.
 
 constructor(): Se ejecuta al crear la instancia del componente, en el constructor puedes inicializar el estado y enlazar manejadores de eventos.
 render(): Es el único método requerido, cuando se ejecuta, examina el estado y las propiedades y dibuja el componente en el árbol del DOM.
 componentDidMount(): Se invoca inmediatamente después de que un componente se ha insertado al árbol del DOM. Es útil para ejecutar suscripciones o peticiones asíncronas a API's, bases de datos, servicios, etc.
-Actualización
 
 2.Estos métodos son ejecutados por cambios en el estado o las propiedades de los componentes.
 
@@ -63,14 +67,12 @@ render(): redibuja el componente cuando detecta cambios en el estado o las propi
 componentDidUpdate(): Se ejecuta inmediatamente después de que la actualización del estado o las propiedades sucede, al igual que componenDidUpdate es un método ideal para hacer peticiones externas.
 
 3.Estos métodos son ejecutados una vez que el componente ha sido eliminado del árbol del DOM.
-
 componentWillUnmount(): Se ejecuta antes de destruir el componente del árbol del DOM, es un método útil para hacer tareas de limpieza.
 
 
 ***componentDidMount()***
 
 En el momento que tu componente ya se creo, es cuando este metodo empieza a ejecutarse.
-
 En este método se suele poner las llamadas a la api en el caso de que lo necesitaras.
 
 Ejemplo:
@@ -90,7 +92,6 @@ componentDidMount = () => {
 ***componentDidUpdate()***
 
 Este ciclo se invoca tan pronto como la actualizacion ocurre.
-
 Se suele usar para actualizar el DOM con los datos de tu state.
 
 Ejemplo de uso:
@@ -122,8 +123,7 @@ Cuando creamos un proyecto de React. JS con la plantilla, por defecto se ejecuta
 
 ## ***Router***
 
-React Router es una colección de componentes de navegación la cual podemos usar
-tanto en web o en móvil con React Native. Con esta librearía vamos a obtener un enrutamiento
+React Router es una colección de componentes de navegación la cual podemos usar tanto en web o en móvil con React Native. Con esta librearía vamos a obtener un enrutamiento
 dinámico gracias a los componentes, en otras palabras tenemos unas rutas que renderizan un componente.
 
 ***Switch***
@@ -179,7 +179,7 @@ const App = () => (
 
 Esta es una característica de ES6, que también se usa en React. Mira el siguiente ejemplo:
 
-Los llamados atributos de propagación que el nombre representa permiten expandir una expresión.
+Los llamados atributos de propagación permiten expandir una expresión.
 
 ```js
 var parts = ['two', 'three'];
@@ -213,19 +213,10 @@ constructor (props) {
     }
 }
 ```
-Si no defines ningún estado en el constructor, entonces no lo necesitas.
+Si no se define ningún estado en el constructor, entonces no lo necesita.
 
-Si se te ocurre definir el state usando las props pasados como parámetros probablemente es mejor definir el state en un componente padre o en la raíz de todos los componentes porque el estado no estará sincronizado con los cambios de las propiedades.
 
-```js
-constructor (props) {
-    super(props);
-    this.state = {
-        propieda: props.nombrePropiedad
-    }
-}
-```
-Para enlazar la referencia de la instancia de nuestro componente a los métodos que son utilizados en el método render() y que normalmente son los manejadores de eventos:
+Se tendra que enlazar la referencia de la instancia de nuestro componente a los métodos que son utilizados en el método render() y que normalmente son los manejadores de eventos:
 ```js
 class Padre extends React.Component {
     constructor (props) {
