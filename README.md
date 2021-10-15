@@ -14,7 +14,7 @@ El state son los valores internos que manejan la lógica y los datos de un compo
 Para acceder y manipular el estado dentro de un componente de clase debemos hacer uso de this.
  
 
-***Inicializando el state de un componente de clase**
+***Inicializando el state de un componente de clase***
 
 Podemos declarar el estado de la siguiente forma dentro del constructor de la clase
 
