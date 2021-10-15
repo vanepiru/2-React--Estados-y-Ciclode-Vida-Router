@@ -244,29 +244,3 @@ class Padre extends React.Component {
 
 ``` 
 
- ## **Propagación**
-
-Esta es una característica de ES6, que también se usa en React. Mira el siguiente ejemplo:
-
-Los llamados atributos de propagación permiten expandir una expresión.
-
-```js
-var parts = ['two', 'three'];
-var numbers = ['one', ...parts, 'four', 'five']; // ["one", "two", "three", "four", "five"]
-```
-
-//just assume we have an object like this:
-```js
-var person= {
-    name: 'Alex',
-    age: 35
-}
-```
-Con propagación
-```js
-<Modal {...person} title='Modal heading' animation={false} />
-```
-es igual a
-```js
-<Modal name={person.name} age={person.age} title='Modal heading' animation={false} />
-```
