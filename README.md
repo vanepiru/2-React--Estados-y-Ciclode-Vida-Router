@@ -174,7 +174,7 @@ const App = () => (
 );
 ```
 
- ## **Propagación de propiedad**
+ ## **Propagación**
 
 
 Esta es una característica de ES6, que también se usa en React. Mira el siguiente ejemplo:
@@ -202,7 +202,7 @@ es igual a
 <Modal name={person.name} age={person.age} title='Modal heading' animation={false} />
 ```
 
-## **Constructor Más definiciones**
+## **Constructor (+ definiciones)**
 
 El estado de nuestro componente en el constructor se define así:
 ```js
