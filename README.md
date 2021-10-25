@@ -1,6 +1,6 @@
 # React
 
-## Estados y Ciclo de vida 
+## Estados y Ciclo de Vida
 
 ***State***
 
@@ -118,9 +118,6 @@ componentWillUnmount() {
 ![image](https://user-images.githubusercontent.com/6796155/137124077-0bc9e1b8-f9f9-4fd4-b6b5-44ccf92221e5.png)
 
 
-## ***Puerto por Defecto***
-
-Cuando creamos un proyecto de React. JS con la plantilla, por defecto se ejecutará en el puerto 3000
 
 ## ***Router***
 
